@@ -1,0 +1,11 @@
+<%= form_for(@project) do |f| %>
+
+  <%= render 'error_messages_projects' %>
+  <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: 'Choisir une catégorie' }) %><br>
+       <%= f.label :title %><br>
+       <%= f.text_field :title, placeholder: 'Ecrire le titre du projet ici' %><br>
+       <%= f.label :content %><br>
+       <%= f.text_area :content, size: “60x12”, placeholder: 'Ecrire la description du projet ici' %><br>
+
+       <%= f.submit %>
+<% end %>

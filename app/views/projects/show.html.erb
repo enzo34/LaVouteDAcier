@@ -1,0 +1,4 @@
+<h1><%= @project.title %></h1>
+<p><%= @project.content %></p>
+<%= link_to "Editer", edit_project_path(@project) %>
+<% link_to "Supprimer", @project, method: :delete, data: { confirm: "Etes-vous sures ?"} %>
